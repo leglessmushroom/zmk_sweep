@@ -23,13 +23,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -71,8 +64,8 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    ~     │  [       │     ]    │      {   │     }    │   │          │          │          │          │   esc    │
-           &kp TILDE    &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC       &trans     &trans     &trans     &trans     &kp ESC
+        //│    ~     │  [       │     ]    │      {   │     }    │   │ settings │          │          │          │   esc    │
+           &kp TILDE    &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC       &mo 3    &trans     &trans     &trans     &kp ESC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │     ^    │   &      │    _     │  \       │      ?   │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET &kp AMPS    &kp UNDER  &kp BSLH   &kp QMARK
